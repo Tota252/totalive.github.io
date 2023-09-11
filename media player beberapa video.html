@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Video Player</title> 
+  <style>
+       
+        * {
+          background: #4F709C;
+        }
+        
+        marquee {
+          
+        }
+    
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        .video-posters {
+         
+        }
+
+        .video-poster {
+            margin: 10px;
+            cursor: pointer;
+        }
+        
+        img {
+            width: 145px;
+            height: 72px;
+        }
+        
+
+        
+        
+        marquee {
+            background: #22668D;
+            border-radius: 5px;
+            color: white;
+        }
+        
+        .link-donate {
+           display: flex;
+           justify-content: center;
+           top: 3px;
+           color: yellow;
+        }
+        
+        .judul {
+           text-align: center;
+        }
+        
+        a {
+          text-align: left;
+        }
+       
+    </style> 
+ </head> 
+ <body> 
+  <div class="judul"> 
+   <p>Tota Editz Live</p> 
+  </div> <marquee>
+    Bantu Admin Bayar Server Agar terus bisa menayangkan live Gratis ini melalui tombol Dibawah 
+  </marquee> 
+  <div class="link-donate"> <a href="https://sociabuzz.com/totarahman/donate">DONASI DISINI</a> 
+  </div> 
+  <div class="video-container"> 
+   <video controls autoplay poster="https://i.postimg.cc/sX3cQGdB/20230911-165529-0000.png" id="videoPlayer"> 
+    <source src="" type="application/x-mpegURL"> Your browser does not support the video tag. 
+   </video> 
+  </div> 
+  <div class="video-posters"> 
+   <img class="video-poster" src="https://i.postimg.cc/ZKnwNX2c/Indonesian-vs-Turkmenistan.jpg" alt="Video Poster 1" onclick="playVideo('http://nxanv-live-cdn.mncnow.id/live/eds/rcti-2/sa_hls/rcti-2.m3u8')"> 
+   <img class="video-poster" src="https://i.postimg.cc/65dVqmsH/images.jpg" alt="Video Poster 2" onclick="playVideo('http://210.210.155.37/qwr9ew/s/s03/index.m3u8')"> <!-- Tambahkan poster video lainnya sesuai kebutuhan --> 
+  </div> 
+  <div class="video-links"> 
+   <p>Konten Live Lainnya:</p> 
+   <ul> <a href="#" onclick="playVideo('http://dontuse3.strmz.cc:2082/mdaley99/DaUGMWipjG/2186985')">La Liga</a> 
+   </ul> 
+   <ul> <a href="#" onclick="playVideo('http://vod.linknetott.swiftcontent.com/Content/HLS/Live/Channel(ch103)/index.m3u8')">Cartoon Network</a> <!-- Tambahkan tautan video lainnya sesuai kebutuhan --> 
+   </ul> 
+  </div> 
+  <script>
+        function playVideo(source) {
+            const video = document.getElementById('videoPlayer');
+            video.src = source;
+            video.load();
+            video.play();
+        }
+    </script> 
+ 
+</body></html>
